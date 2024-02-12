@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.flex-container{
+    display: flex;
+    width: 100vw;
+    height: 50vh;
+    flex-direction: row;
+    /* shifts items on main axis */
+    justify-content: space-around; /* flex-end, center, space-between */
+    align-items: flex-start;
+    /* align items on cross axis */
+    flex-wrap: wrap;
+}
+
+.item{
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 2%;
+    width: 200px;
+    height: 200px;
+    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
+    display: inline-block;
+    background-color: rgb(190, 252, 249);
+}
+
+.item img{
+    width: 75%;
+    height: 75%;
+    margin-top: 5px;
+}
+
+.item p{
+    margin-top: 10px;
+}
+
+
+@keyframes change-width{
+    0%{
+        width: 75%;
+        height: 75%;
+    }
+    50%{
+        width: 100px;
+        height: 100px;
+    }
+    100%{
+        width: 75%;
+        height: 75%;
+    }
+}
+
+.width {
+    animation: change-width 2s infinite alternate; 
+}
+
+@keyframes border-change {
+    0% {
+        border: 3px solid rgb(255, 190, 221);
+    }
+    50% {
+        border-color: rgb(187, 255, 131); 
+    }
+    100% {
+        border-color: rgb(255, 190, 221); 
+    }
+}
+
+.border {
+    border: 3px solid rgb(255, 190, 221); 
+    animation: border-change 5s infinite;
+}
+
+@keyframes color-change {
+    0% {
+        color: rgb(144, 255, 149);
+    }
+    50% {
+        color: rgb(231, 134, 255);
+    }
+    100% {
+        color: rgb(144, 255, 149);
+    }
+}
+
+.color{
+    animation: color-change 3s infinite;
+}
